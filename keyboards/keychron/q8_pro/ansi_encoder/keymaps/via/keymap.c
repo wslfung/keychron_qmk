@@ -118,7 +118,7 @@ bool rgb_matrix_indicators_user(void) {
         rgb_matrix_set_color(23, RGB_RED);
         rgb_matrix_set_color(24, RGB_GOLD);
         rgb_matrix_set_color(39, RGB_GOLD);
-        rgb_matrix_set_color(40, RGB_CYAN=);
+        rgb_matrix_set_color(40, RGB_CYAN);
         break;
       case 2:
         rgb_matrix_set_color(61, RGB_CYAN);
