@@ -78,7 +78,9 @@
 #define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
 
 /* Old default behavior of mod-taps */
-#define HOLD_ON_OTHER_KEY_PRESS
+#define TAPPING_TERM 350
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+// #define IGNORE_MOD_TAP_INTERRUPT
 
 /* Factory test keys */
 #define FN_KEY1 MO(4)

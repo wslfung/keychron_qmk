@@ -59,9 +59,11 @@ static void pairing_key_timer_cb(void *arg) {
 bool dip_switch_update_kb(uint8_t index, bool active) {
     if (index == 0) {
 #ifdef INVERT_OS_SWITCH_STATE
-        default_layer_set(1UL << (!active ? 1 : 0));
+        // default_layer_set(1UL << (!active ? 1 : 0));
+        default_layer_set(1UL << 0);
 #else
-        default_layer_set(1UL << (active ? 1 : 0));
+        // default_layer_set(1UL << (active ? 1 : 0));
+        default_layer_set(1UL << 0);
 #endif
     }
     dip_switch_update_user(index, active);
@@ -113,7 +115,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                     host_idx = keycode - BT_HST1 + 1;
                     chVTSet(&pairing_key_timer, TIME_MS2I(2000), (vtfunc_t)pairing_key_timer_cb, &host_idx);
                     bluetooth_connect_ex(host_idx, 0);
-                } else {
+               } else {
                     host_idx = 0;
                     chVTReset(&pairing_key_timer);
                 }
