@@ -81,6 +81,14 @@
 #define TAPPING_TERM 200
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 // #define IGNORE_MOD_TAP_INTERRUPT
+/* Encoder Configuration */
+#ifdef ENCODER_ENABLE
+#    define ENCODER_DEFAULT_POS 0x3
+#endif
+
+/* HC595 Driver configuretion */
+#define HC595_OFFSET_INDEX 1
+#define HC595_END_INDEX 14
 
 /* Factory test keys */
 #define FN_KEY1 MO(4)
