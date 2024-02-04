@@ -25,4 +25,8 @@
 #define ENCODER_DEFAULT_POS 0x3
 
 /* Enable caps-lock LED */
-#define CAPS_LOCK_LED_INDEX 48
+// #define CAPS_LOCK_LED_INDEX 48
+
+#undef HOLD_ON_OTHER_KEY_PRESS
+#define TAPPING_TERM 200
+#define PERMISSIVE_HOLD
